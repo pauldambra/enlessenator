@@ -5,6 +5,8 @@
  * we can hide any of those
  */
 
+posthog.init('phc_mqsINP8dwuAugY5uXTVwcTEGxQgr3djkryng2Z94MsS',{api_host:'https://app.posthog.com',persistence:'localStorage'})
+
 function getTextWithoutChildren(el) {
   const t = Array.from(el.childNodes)
     .filter((node) => node.nodeType === Node.TEXT_NODE)

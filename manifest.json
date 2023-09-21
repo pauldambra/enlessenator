@@ -2,18 +2,15 @@
   "manifest_version": 3,
   "name": "Facebook but less",
   "description": "I never need reels or 'suggested for you' posts",
-  "version": "1.0",
+  "version": "0.0.0",
   "action": {
     "default_popup": "pop-up.html",
     "default_icon": "icon.png"
   },
   "content_scripts": [
     {
-      "js": ["scripts/content.js"],
-      "matches": [
-        "https://www.facebook.com/*",
-        "https://facebook.com/*"
-      ]
+      "js": ["node_modules/posthog-js/dist/array.js", "scripts/content.js"],
+      "matches": ["https://www.facebook.com/*", "https://facebook.com/*"]
     }
   ]
 }

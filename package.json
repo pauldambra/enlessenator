@@ -10,5 +10,8 @@
   "license": "CC-BY-SA-4.0",
   "devDependencies": {
     "chrome-types": "^0.1.231"
+  },
+  "dependencies": {
+    "posthog-js": "^1.79.1"
   }
 }

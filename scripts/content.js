@@ -26,7 +26,6 @@ function findAllDivsWithText(element, targetText) {
 
   if (!seenElements.has(element)) {
     seenElements.add(element);
-    element.setAttribute("data-seen", true);
 
     if (
       element.tagName === "SPAN" &&
@@ -35,10 +34,8 @@ function findAllDivsWithText(element, targetText) {
       elementMatched = true;
       matches.suggestedForYouMatched.push(element);
     } else if (element.tagName === "A") {
-      console.log("link");
       element.setAttribute("data-seen", element.getAttribute("href"));
       if (element.getAttribute("href").startsWith("/ads")) {
-        console.log("link", element.getAttribute("href"));
         elementMatched = true;
         matches.sponsereds.push(element);
       }
@@ -127,11 +124,13 @@ const onScroll = debounce(function () {
   matches.suggestedForYouMatched.forEach((suggested) => {
     hideSuggested(suggested);
     hidden.suggestedForYou++;
+    posthog.capture('hidden_suggested')
   });
 
   matches.sponsereds.forEach((sponsored) => {
     hideSponsored(sponsored);
     hidden.sponsereds++;
+    posthog.capture('hidden_sponsored')
   });
 
   console.log("total hidden", hidden);

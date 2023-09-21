@@ -1,0 +1,14 @@
+{
+  "name": "facebook-but-less",
+  "version": "0.0.0",
+  "description": "<html style=\"width: 300px;height: 150px;\">   <body>     <h1>Facebook - but less</h1>     <p>I tried clicking \"hide\" and \"show less\" but Facebook's suggested posts are just trash and clickbait and they won't go away</p>     <p>This hides suggested posts and reels</p>   </body> </html>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "CC-BY-SA-4.0",
+  "devDependencies": {
+    "chrome-types": "^0.1.231"
+  }
+}

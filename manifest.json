@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Facebook but less",
+  "description": "I never need reels or 'suggested for you' posts",
+  "version": "1.0",
+  "action": {
+    "default_popup": "readme.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://www.facebook.com/*",
+        "https://facebook.com/*",
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ]
+}
